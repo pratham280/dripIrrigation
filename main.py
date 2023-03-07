@@ -33,8 +33,11 @@ while True:
         else:
             pass
     if (button_on.value() == 1) and watering == False:
-        water()
-        watering = True
+            if soil.read() >=0 and soil.read() <= 750:
+                pass
+            else:
+                water()
+                watering = True
     elif (stop.value() == 1) and watering == True:
         revert()
         watering = False
