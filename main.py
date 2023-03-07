@@ -6,8 +6,10 @@ while True:
     seconds = time.localtime(time.time() + offset)[5]
     realtime = hours + minutes + seconds
 
-    if (soil.read() >= 0 and soil.read() <= 750) and watering == False:
+    if (soil.read() >= 0 and soil.read() <= 750):
         if relay.value() == 1:
+            watering = False
+            fail = False
             revert()
         else:
             pass
