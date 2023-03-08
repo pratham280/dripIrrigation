@@ -68,7 +68,7 @@ wifi_con.duty(0)
 soil = ADC(0)
 relay = Pin(5, Pin.OUT)  #d1
 relay.off()
-buzzer = PWM(Pin(3, Pin.OUT), )
+buzzer = PWM(Pin(3, Pin.OUT), 5000)
 # ultra_trig = Pin(16, Pin.OUT)
 # ultra_echo = Pin(0, Pin.IN)
 # wifi_dis = PWM(Pin(0, Pin.OUT), 5000)  #orange led d3
