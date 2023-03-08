@@ -62,12 +62,13 @@ button_on = Pin(12, Pin.IN)  #d6 button on
 stop = Pin(13, Pin.IN)  #d7 13 button stop
 #-------------------------------------------------------- led
 wifi_con = PWM(Pin(14, Pin.OUT), 5000)  #red led d5
-wifi_suc = PWM(Pin(2, Pin.OUT), 5000)  #green led d4
+wifi_suc = PWM(Pin(4, Pin.OUT), 5000)  #green led d2
 wifi_suc.duty(0)
 wifi_con.duty(0)
 soil = ADC(0)
-relay = Pin(15, Pin.OUT)  #d8
+relay = Pin(5, Pin.OUT)  #d1
 relay.off()
+buzzer = PWM(Pin(3, Pin.OUT), )
 # ultra_trig = Pin(16, Pin.OUT)
 # ultra_echo = Pin(0, Pin.IN)
 # wifi_dis = PWM(Pin(0, Pin.OUT), 5000)  #orange led d3
